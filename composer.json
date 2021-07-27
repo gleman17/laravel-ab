@@ -1,7 +1,8 @@
 {
-    "name": "ben182/laravel-ab",
+    "name": "gleman17/laravel-ab",
     "description": "Laravel A/B experiment testing tool",
     "keywords": [
+        "gleman17",
         "ben182",
         "php",
         "laravel",
@@ -9,7 +10,7 @@
         "laravel-5-package",
         "ab-testing"
     ],
-    "homepage": "https://github.com/ben182/laravel-ab",
+    "homepage": "https://github.com/gleman17/laravel-ab",
     "license": "MIT",
     "type": "library",
     "authors": [
