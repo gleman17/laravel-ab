@@ -1,6 +1,6 @@
 <?php
 
-namespace Ben182\AbTesting\Models;
+namespace Gleman17\AbTesting\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

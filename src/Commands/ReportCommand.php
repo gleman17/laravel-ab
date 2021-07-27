@@ -1,6 +1,6 @@
 <?php
 
-namespace Ben182\AbTesting\Commands;
+namespace Gleman17\AbTesting\Commands;
 
 use Illuminate\Console\Command;
 use Ben182\AbTesting\Models\Experiment;

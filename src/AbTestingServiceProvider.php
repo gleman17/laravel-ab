@@ -1,6 +1,6 @@
 <?php
 
-namespace Ben182\AbTesting;
+namespace Gleman17\AbTesting;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;

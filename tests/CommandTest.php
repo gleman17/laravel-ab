@@ -1,6 +1,6 @@
 <?php
 
-namespace Ben182\AbTesting\Tests;
+namespace Gleman17\AbTesting\Tests;
 
 use Ben182\AbTesting\Models\Goal;
 use Ben182\AbTesting\AbTestingFacade;
