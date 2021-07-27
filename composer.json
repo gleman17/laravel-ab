@@ -18,6 +18,11 @@
             "name": "Ben",
             "email": "moin@benjaminbortels.de",
             "role": "Developer"
+        },
+        {
+            "name": "Greg",
+            "email": "",
+            "role": "Developer"
         }
     ],
     "require": {
