@@ -1,6 +1,6 @@
 <?php
 
-namespace Ben182\AbTesting\Events;
+namespace Gleman17\AbTesting\Events;
 
 class ExperimentNewVisitor
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ben182\AbTesting;
+namespace Gleman17\AbTesting;
 
 use Ben182\AbTesting\Models\Goal;
 use Illuminate\Support\Collection;
