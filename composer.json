@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ben182\\AbTesting\\": "src"
+            "Gleman17\\AbTesting\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ben182\\AbTesting\\Tests\\": "tests"
+            "Gleman17\\AbTesting\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ben182\\AbTesting\\AbTestingServiceProvider"
+                "Gleman17\\AbTesting\\AbTestingServiceProvider"
             ],
             "aliases": {
-                "AbTesting": "Ben182\\AbTesting\\AbTestingFacade"
+                "AbTesting": "Gleman17\\AbTesting\\AbTestingFacade"
             }
         }
     }
