@@ -125,8 +125,11 @@ class AbTesting
     public function isExperiment(string $name)
     {
         $this->pageView();
-
-        return $this->getExperiment()->name === $name;
+        $experiment = $this->getExperiment();
+        if ($experiment === null){
+            return false;
+        }
+        return $experiment->name === $name;
     }
 
     /**
@@ -142,7 +145,12 @@ class AbTesting
             $this->pageView();
         }
 
-        $goal = $this->getExperiment()->goals->where('name', $goal)->first();
+        $experiment = $this->getExperiment();
+        if ($experiment === null){
+            return false;
+        }
+
+        $goal = $experiment->goals->where('name', $goal)->first();
 
         if (! $goal) {
             return false;
