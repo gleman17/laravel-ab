@@ -1,12 +1,12 @@
 <?php
 
-namespace Gleman17\AbTesting;
+namespace gleman17\AbTesting;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Gleman17\AbTesting\Commands\ResetCommand;
-use Gleman17\AbTesting\Commands\ReportCommand;
+use gleman17\AbTesting\Commands\ResetCommand;
+use gleman17\AbTesting\Commands\ReportCommand;
 
 class AbTestingServiceProvider extends ServiceProvider
 {

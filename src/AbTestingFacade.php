@@ -1,11 +1,11 @@
 <?php
 
-namespace Gleman17\AbTesting;
+namespace gleman17\AbTesting;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Gleman17\AbTesting\AbTesting
+ * @see \gleman17\AbTesting\AbTesting
  */
 class AbTestingFacade extends Facade
 {

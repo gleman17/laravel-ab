@@ -1,11 +1,11 @@
 <?php
 
-namespace Gleman17\AbTesting\Tests;
+namespace gleman17\AbTesting\Tests;
 
-use Gleman17\AbTesting\AbTesting;
-use Gleman17\AbTesting\AbTestingFacade;
+use gleman17\AbTesting\AbTesting;
+use gleman17\AbTesting\AbTestingFacade;
 use Illuminate\Support\Facades\Event;
-use Gleman17\AbTesting\Events\GoalCompleted;
+use gleman17\AbTesting\Events\GoalCompleted;
 
 class GoalTest extends TestCase
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Gleman17\AbTesting\Tests;
+namespace gleman17\AbTesting\Tests;
 
-use Gleman17\AbTesting\Models\Goal;
-use Gleman17\AbTesting\AbTestingFacade;
-use Gleman17\AbTesting\Models\Experiment;
-use Gleman17\AbTesting\Commands\ReportCommand;
+use gleman17\AbTesting\Models\Goal;
+use gleman17\AbTesting\AbTestingFacade;
+use gleman17\AbTesting\Models\Experiment;
+use gleman17\AbTesting\Commands\ReportCommand;
 
 class CommandTest extends TestCase
 {

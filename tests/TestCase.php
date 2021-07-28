@@ -1,10 +1,10 @@
 <?php
 
-namespace Gleman17\AbTesting\Tests;
+namespace gleman17\AbTesting\Tests;
 
-use Gleman17\AbTesting\AbTestingFacade;
+use gleman17\AbTesting\AbTestingFacade;
 use Illuminate\Support\Facades\Event;
-use Gleman17\AbTesting\AbTestingServiceProvider;
+use gleman17\AbTesting\AbTestingServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

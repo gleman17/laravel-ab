@@ -26,7 +26,7 @@ composer require gleman17/laravel-ab
 After installation publish the config file:
 
 ```bash
-php artisan vendor:publish --provider="Gleman17\AbTesting\AbTestingServiceProvider"
+php artisan vendor:publish --provider="gleman17\AbTesting\AbTestingServiceProvider"
 ```
 
 You can define your experiments and goals in there.
