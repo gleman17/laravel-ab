@@ -1,10 +1,10 @@
 <?php
 
-namespace Gleman17\AbTesting\Commands;
+namespace gleman17\AbTesting\Commands;
 
 use Illuminate\Console\Command;
-use Gleman17\AbTesting\Models\Goal;
-use Gleman17\AbTesting\Models\Experiment;
+use gleman17\AbTesting\Models\Goal;
+use gleman17\AbTesting\Models\Experiment;
 
 class ResetCommand extends Command
 {

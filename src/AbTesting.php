@@ -1,14 +1,14 @@
 <?php
 
-namespace Gleman17\AbTesting;
+namespace gleman17\AbTesting;
 
-use Gleman17\AbTesting\Models\Goal;
+use gleman17\AbTesting\Models\Goal;
 use Illuminate\Support\Collection;
-use Gleman17\AbTesting\Models\Experiment;
-use Gleman17\AbTesting\Events\GoalCompleted;
+use gleman17\AbTesting\Models\Experiment;
+use gleman17\AbTesting\Events\GoalCompleted;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
-use Gleman17\AbTesting\Events\ExperimentNewVisitor;
-use Gleman17\AbTesting\Exceptions\InvalidConfiguration;
+use gleman17\AbTesting\Events\ExperimentNewVisitor;
+use gleman17\AbTesting\Exceptions\InvalidConfiguration;
 
 class AbTesting
 {
@@ -68,7 +68,7 @@ class AbTesting
     /**
      * Triggers a new visitor. Picks a new experiment and saves it to the session.
      *
-     * @return \Gleman17\AbTesting\Models\Experiment|void
+     * @return \gleman17\AbTesting\Models\Experiment|void
      */
     public function pageView()
     {
@@ -106,7 +106,7 @@ class AbTesting
     /**
      * Calculates a new experiment.
      *
-     * @return \Gleman17\AbTesting\Models\Experiment|null
+     * @return \gleman17\AbTesting\Models\Experiment|null
      */
     protected function getNextExperiment()
     {
@@ -137,7 +137,7 @@ class AbTesting
      *
      * @param string $goal The goals name
      *
-     * @return \Gleman17\AbTesting\Models\Goal|false
+     * @return \gleman17\AbTesting\Models\Goal|false
      */
     public function completeGoal(string $goal)
     {
@@ -171,7 +171,7 @@ class AbTesting
     /**
      * Returns the currently active experiment.
      *
-     * @return \Gleman17\AbTesting\Models\Experiment|null
+     * @return \gleman17\AbTesting\Models\Experiment|null
      */
     public function getExperiment()
     {
