@@ -2,10 +2,10 @@
 
 namespace Gleman17\AbTesting\Tests;
 
-use Ben182\AbTesting\AbTesting;
-use Ben182\AbTesting\AbTestingFacade;
+use Gleman17\AbTesting\AbTesting;
+use Gleman17\AbTesting\AbTestingFacade;
 use Illuminate\Support\Facades\Event;
-use Ben182\AbTesting\Events\GoalCompleted;
+use Gleman17\AbTesting\Events\GoalCompleted;
 
 class GoalTest extends TestCase
 {

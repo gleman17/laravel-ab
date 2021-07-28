@@ -2,10 +2,10 @@
 
 namespace Gleman17\AbTesting\Tests;
 
-use Ben182\AbTesting\Models\Goal;
-use Ben182\AbTesting\AbTestingFacade;
-use Ben182\AbTesting\Models\Experiment;
-use Ben182\AbTesting\Commands\ReportCommand;
+use Gleman17\AbTesting\Models\Goal;
+use Gleman17\AbTesting\AbTestingFacade;
+use Gleman17\AbTesting\Models\Experiment;
+use Gleman17\AbTesting\Commands\ReportCommand;
 
 class CommandTest extends TestCase
 {

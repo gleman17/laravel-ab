@@ -3,8 +3,8 @@
 namespace Gleman17\AbTesting\Commands;
 
 use Illuminate\Console\Command;
-use Ben182\AbTesting\Models\Goal;
-use Ben182\AbTesting\Models\Experiment;
+use Gleman17\AbTesting\Models\Goal;
+use Gleman17\AbTesting\Models\Experiment;
 
 class ResetCommand extends Command
 {
