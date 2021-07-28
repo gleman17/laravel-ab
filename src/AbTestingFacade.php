@@ -5,7 +5,7 @@ namespace Gleman17\AbTesting;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Ben182\AbTesting\AbTesting
+ * @see \Gleman17\AbTesting\AbTesting
  */
 class AbTestingFacade extends Facade
 {

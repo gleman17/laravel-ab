@@ -2,13 +2,13 @@
 
 namespace Gleman17\AbTesting;
 
-use Ben182\AbTesting\Models\Goal;
+use Gleman17\AbTesting\Models\Goal;
 use Illuminate\Support\Collection;
-use Ben182\AbTesting\Models\Experiment;
-use Ben182\AbTesting\Events\GoalCompleted;
+use Gleman17\AbTesting\Models\Experiment;
+use Gleman17\AbTesting\Events\GoalCompleted;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
-use Ben182\AbTesting\Events\ExperimentNewVisitor;
-use Ben182\AbTesting\Exceptions\InvalidConfiguration;
+use Gleman17\AbTesting\Events\ExperimentNewVisitor;
+use Gleman17\AbTesting\Exceptions\InvalidConfiguration;
 
 class AbTesting
 {
@@ -68,7 +68,7 @@ class AbTesting
     /**
      * Triggers a new visitor. Picks a new experiment and saves it to the session.
      *
-     * @return \Ben182\AbTesting\Models\Experiment|void
+     * @return \Gleman17\AbTesting\Models\Experiment|void
      */
     public function pageView()
     {
@@ -106,7 +106,7 @@ class AbTesting
     /**
      * Calculates a new experiment.
      *
-     * @return \Ben182\AbTesting\Models\Experiment|null
+     * @return \Gleman17\AbTesting\Models\Experiment|null
      */
     protected function getNextExperiment()
     {
@@ -137,7 +137,7 @@ class AbTesting
      *
      * @param string $goal The goals name
      *
-     * @return \Ben182\AbTesting\Models\Goal|false
+     * @return \Gleman17\AbTesting\Models\Goal|false
      */
     public function completeGoal(string $goal)
     {
@@ -171,7 +171,7 @@ class AbTesting
     /**
      * Returns the currently active experiment.
      *
-     * @return \Ben182\AbTesting\Models\Experiment|null
+     * @return \Gleman17\AbTesting\Models\Experiment|null
      */
     public function getExperiment()
     {

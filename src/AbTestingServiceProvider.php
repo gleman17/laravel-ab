@@ -5,8 +5,8 @@ namespace Gleman17\AbTesting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Ben182\AbTesting\Commands\ResetCommand;
-use Ben182\AbTesting\Commands\ReportCommand;
+use Gleman17\AbTesting\Commands\ResetCommand;
+use Gleman17\AbTesting\Commands\ReportCommand;
 
 class AbTestingServiceProvider extends ServiceProvider
 {

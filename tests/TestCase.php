@@ -2,9 +2,9 @@
 
 namespace Gleman17\AbTesting\Tests;
 
-use Ben182\AbTesting\AbTestingFacade;
+use Gleman17\AbTesting\AbTestingFacade;
 use Illuminate\Support\Facades\Event;
-use Ben182\AbTesting\AbTestingServiceProvider;
+use Gleman17\AbTesting\AbTestingServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
