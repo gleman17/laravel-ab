@@ -6,9 +6,11 @@ use gleman17\AbTesting\Models\Goal;
 use Illuminate\Support\Collection;
 use gleman17\AbTesting\Models\Experiment;
 use gleman17\AbTesting\Events\GoalCompleted;
+use Illuminate\Support\Facades\Request;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 use gleman17\AbTesting\Events\ExperimentNewVisitor;
 use gleman17\AbTesting\Exceptions\InvalidConfiguration;
+use Throwable;
 
 class AbTesting
 {
@@ -68,7 +70,7 @@ class AbTesting
     /**
      * Triggers a new visitor. Picks a new experiment and saves it to the session.
      *
-     * @return \gleman17\AbTesting\Models\Experiment|void
+     * @return Experiment|void
      */
     public function pageView()
     {
@@ -106,10 +108,18 @@ class AbTesting
     /**
      * Calculates a new experiment.
      *
-     * @return \gleman17\AbTesting\Models\Experiment|null
+     * @return Experiment|null
+     * @throws Throwable
      */
     protected function getNextExperiment()
     {
+        $experiment_name = Request::input('ab_exp', null);
+        if ($experiment_name !== null) {
+            $experiment = $this->experiments->firstWhere('name', $experiment_name);
+            throw_if($experiment === null, InvalidConfiguration::noForcedExperiment());
+            return $experiment;
+        }
+
         $sorted = $this->experiments->sortBy('visitors');
 
         return $sorted->first();
@@ -171,7 +181,7 @@ class AbTesting
     /**
      * Returns the currently active experiment.
      *
-     * @return \gleman17\AbTesting\Models\Experiment|null
+     * @return Experiment|null
      */
     public function getExperiment()
     {
