@@ -4,3 +4,9 @@ docs
 vendor
 coverage
 .phpunit.result.cache
+.editorconfig
+.gitattributes
+.gitignore
+.scrutinizer.yml
+.styleci.yml
+.idea/*
