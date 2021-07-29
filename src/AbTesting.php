@@ -128,9 +128,12 @@ class AbTesting
     public function isExperiment(string $name)
     {
         $this->pageView();
-        $experiment_name = Request::input('ab_exp', null);
-        if ($experiment_name !== null) {
-            return $experiment_name === $name;
+
+        if (config('ab-testing.allow_ab_exp')){
+            $experiment_name = Request::input('ab_exp', null);
+            if ($experiment_name !== null) {
+                return $experiment_name === $name;
+            }
         }
 
         $experiment = $this->getExperiment();

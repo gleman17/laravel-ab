@@ -32,4 +32,14 @@ return [
     |
     */
     'ignore_crawlers' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Allow ab_exp flag
+    |--------------------------------------------------------------------------
+    |
+    | Allow experiment override -- should be false for production.
+    |
+    */
+    'allow_ab_exp' => false,
 ];
