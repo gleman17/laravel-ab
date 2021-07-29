@@ -38,8 +38,12 @@ return [
     | Allow ab_exp flag
     |--------------------------------------------------------------------------
     |
-    | Allow experiment override -- should be false for production.
+    | Allow experiment override by environment -- should be false for production.
     |
     */
-    'allow_ab_exp' => false,
+    'allow_ab_exp' => [
+        'dev' => true,
+        'test' => true,
+        'prod' => false,
+        ],
 ];

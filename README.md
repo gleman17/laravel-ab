@@ -171,7 +171,7 @@ In addition you can hook into two events:
 
 For the purposes of testing the look and feel of your page you'll sometimes want to specify a particular experiment to run.
 Just attach a parameter of ab_exp=[experiment name] to your url and this will be the experiment that runs, regardless of the
-session state.
+session state.  The config has the variable allow_ab_exp which can be set by environment (the result of env('APP_ENV_STATUS')).
 
 ### Testing
 

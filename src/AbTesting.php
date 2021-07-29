@@ -129,7 +129,7 @@ class AbTesting
     {
         $this->pageView();
 
-        if (config('ab-testing.allow_ab_exp')){
+        if (config('ab-testing.allow_ab_exp')[env('APP_ENV_STATUS')]??false){
             $experiment_name = Request::input('ab_exp', null);
             if ($experiment_name !== null) {
                 return $experiment_name === $name;
