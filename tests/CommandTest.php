@@ -6,6 +6,7 @@ use gleman17\AbTesting\Models\Goal;
 use gleman17\AbTesting\AbTestingFacade;
 use gleman17\AbTesting\Models\Experiment;
 use gleman17\AbTesting\Commands\ReportCommand;
+use PHPUnit\Framework\TestCase;
 
 class CommandTest extends TestCase
 {

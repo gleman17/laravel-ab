@@ -175,6 +175,8 @@ class AbTesting
      */
     public function getExperiment()
     {
+        info('getExperiment');
+        info(json_encode(session(self::SESSION_KEY_EXPERIMENT), JSON_THROW_ON_ERROR));
         return session(self::SESSION_KEY_EXPERIMENT);
     }
 

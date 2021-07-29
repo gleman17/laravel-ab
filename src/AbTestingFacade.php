@@ -18,4 +18,5 @@ class AbTestingFacade extends Facade
     {
         return 'ab-testing';
     }
+    
 }

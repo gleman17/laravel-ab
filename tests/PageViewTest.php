@@ -4,9 +4,11 @@ namespace gleman17\AbTesting\Tests;
 
 use gleman17\AbTesting\AbTesting;
 use gleman17\AbTesting\AbTestingFacade;
+
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
 use gleman17\AbTesting\Events\ExperimentNewVisitor;
+use PHPUnit\Framework\TestCase;
 
 class PageViewTest extends TestCase
 {
