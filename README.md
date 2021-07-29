@@ -167,6 +167,12 @@ In addition you can hook into two events:
 - `ExperimentNewVisitor` gets triggered once an experiment gets assigned to a new visitor. You can grab the experiment as a property of the event.
 - `GoalCompleted` gets triggered once a goal is completed. You can grab the goal as a property of the event.
 
+### Url Overrides
+
+For the purposes of testing the look and feel of your page you'll sometimes want to specify a particular experiment to run.
+Just attach a parameter of ab_exp=[experiment name] to your url and this will be the experiment that runs, regardless of the
+session state.
+
 ### Testing
 
 ``` bash

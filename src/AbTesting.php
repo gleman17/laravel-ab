@@ -71,6 +71,7 @@ class AbTesting
      * Triggers a new visitor. Picks a new experiment and saves it to the session.
      *
      * @return Experiment|void
+     * @throws Throwable
      */
     public function pageView()
     {
@@ -113,15 +114,7 @@ class AbTesting
      */
     protected function getNextExperiment()
     {
-        $experiment_name = Request::input('ab_exp', null);
-        if ($experiment_name !== null) {
-            $experiment = $this->experiments->firstWhere('name', $experiment_name);
-            throw_if($experiment === null, InvalidConfiguration::noForcedExperiment());
-            return $experiment;
-        }
-
         $sorted = $this->experiments->sortBy('visitors');
-
         return $sorted->first();
     }
 
@@ -135,6 +128,11 @@ class AbTesting
     public function isExperiment(string $name)
     {
         $this->pageView();
+        $experiment_name = Request::input('ab_exp', null);
+        if ($experiment_name !== null) {
+            return $experiment_name === $name;
+        }
+
         $experiment = $this->getExperiment();
         if ($experiment === null){
             return false;
@@ -185,8 +183,6 @@ class AbTesting
      */
     public function getExperiment()
     {
-        info('getExperiment');
-        info(json_encode(session(self::SESSION_KEY_EXPERIMENT), JSON_THROW_ON_ERROR));
         return session(self::SESSION_KEY_EXPERIMENT);
     }
 
@@ -205,4 +201,5 @@ class AbTesting
             return Goal::find($goalId);
         });
     }
+
 }
