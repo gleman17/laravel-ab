@@ -188,7 +188,17 @@ class AbTesting
      */
     public function getExperiment()
     {
-        return session(self::SESSION_KEY_EXPERIMENT);
+        $experiment = session(self::SESSION_KEY_EXPERIMENT);
+        $session_variable_is_incomplete = !is_object($experiment) && gettype($experiment) === 'object';
+        if ($session_variable_is_incomplete){
+            session()->forget([
+                self::SESSION_KEY_EXPERIMENT,
+                self::SESSION_KEY_GOALS,
+            ]);
+            session()->flush();
+            return null;
+        }
+        return $experiment;
     }
 
     /**
